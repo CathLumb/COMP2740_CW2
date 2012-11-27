@@ -1,1 +1,20 @@
-Hello world 
+This is a small program which looks at earthquakes from the USGS system.
+It calculates the mean elevation & depth of a given section of earthquakes.
+
+It also shows these graphically on a google map.
+
+Build for the Practical Problem Solving module at Leeds University School of Computing
+
+Requirements:
+python3+, json, requests, sys, webbrowser, os
+
+Usage: ./quakes.py <detail> <period>
+(note! don't actually include the braces)
+
+Values for detail: 2.5, 4.5, significant
+Values for period: week, month
+
+For more infomation please see:
+http://earthquake.usgs.gov/earthquakes/feed/
+
+ 
