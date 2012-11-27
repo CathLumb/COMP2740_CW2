@@ -93,7 +93,7 @@ def genhtml(dyndata):
 	#loop to write each quake into the map
 	for value in dyndata:
 		#print(value)
-		out_file.write(value)
+		out_file.write(value + "\n")
 		
 	out_file.write(end)
 	
@@ -140,9 +140,9 @@ try:
 			
 			place = (quake['properties']['place'])
 			place = place.replace("'", "") #strips out the ' in the description of places
-			
+			info = mag[0] + ', ' + place
 			#creates the correctly formatted infomation for the g.maps vis api
-			dyndata.append('[' + str(str(spec[1])) + ', ' + str(spec[0]) + ', \'' + place + '\'],')
+			dyndata.append('[' + str(str(spec[1])) + ', ' + str(spec[0]) + ', \'' + info + '\'],')
 		
  	
  

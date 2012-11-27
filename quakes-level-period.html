@@ -1,0 +1,35 @@
+
+				<html>
+				  <head>
+				<title> Earthquake Plots </title>
+				    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+				    <script type="text/javascript">
+				      google.load("visualization", "1", {packages:["map"]});
+				      google.setOnLoadCallback(drawMap);
+				      function drawMap() {
+				        var data = google.visualization.arrayToDataTable([
+						['Lat', 'Lon', 'Name'],
+				[49.273, 155.476, '163km SSW of Severo-Kurilsk, Russia'],
+[18.407, -100.373, '9km E of Tlalchapa, Mexico'],
+[-29.122, -71.204, '75km SW of Vallenar, Chile'],
+[57.797, -142.809, '253km S of Cape Yakataga, Alaska'],
+[14.164, -92.167, '30km WSW of Champerico, Guatemala'],
+[23.005, 95.884, '52km NNE of Shwebo, Burma'],
+[37.1386, -83.0537, '17km SE of Hazard, Kentucky'],
+[13.981, -91.878, '35km S of Champerico, Guatemala'],
+[35.205, -90.636, '8km SW of Parkin, Arkansas'],
+[36.5915, -121.2008, '21km NNE of Soledad, California'],
+[52.679, -132.59, '152km SSW of Masset, Canada'],
+
+						       ]);
+
+								        var map = new google.visualization.Map(document.getElementById('map_div'));
+								        map.draw(data, {showTip: true});
+								      }
+								    </script>
+								  </head>
+
+								  <body>
+								    <div id="map_div" style="width: 800px; height: 500px"></div>
+								  </body>
+								</html>					
